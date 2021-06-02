@@ -1,0 +1,7 @@
+
+The spacing and indention matters in Python
+
+When a condition evaluates to False, all indented code will be skipped
+
+if x > 5:
+    print("x is greater than 5")

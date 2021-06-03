@@ -5,14 +5,19 @@
 # Do not worry about error checking the user input - assume the user types numbers properly.
 
 hrs = input("Enter Hours: ")
-h = float(hrs)
 rate = input("Enter pay rate ($/hour): ")
-r = float(rate)
 
+try: 
+  h = float(hrs)
+  r = float(rate)
+except:
+  print("\nError, please enter numeric input\n")
+  quit()
+  
 if h <= 40:
     pay = h*r
 else:
     base = 40
     ot = h-base
     pay = base*r+ot*r*1.5
-print(pay)
+print("Totoal pay:",pay)
